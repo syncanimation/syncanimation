@@ -3,6 +3,9 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)  
 [Project Page](https://syncanimation.github.io/) | [Paper (arXiv)](https://arxiv.org/abs/2501.14646)   
 📢 <b>Official repository of SyncAnimation. The paper has been accepted to IJCAI 2025.</b>
+<p align="center">
+  <img src="assets/image/your_image.png" alt="SyncAnimation Demo" width="720">
+</p>
 > “Generating talking avatar driven by audio remains a significant challenge. Existing methods typically require high computational costs and often lack sufficient facial detail and realism, making them unsuitable for applications that demand high real-time performance and visual quality. Additionally, while some methods can synchronize lip movement, they still face issues with consistency between facial expressions and upper body movement, particularly during silent periods. In this paper, we introduce SyncAnimation, the first NeRF-based method that achieves audio-driven, stable, and real-time generation of speaking avatar by combining generalized audio-to-pose matching and audio-to-expression synchronization. By integrating AudioPose Syncer and AudioEmotion Syncer, SyncAnimation achieves high-precision poses and expression generation, progressively producing audio-synchronized upper body, head, and lip shapes. Furthermore, the High-Synchronization Human Renderer ensures seamless integration of the head and upper body, and achieves audio-sync lip.”  
 
 <!--
@@ -20,7 +23,7 @@
 
 ### Linux / Ubuntu  
 
-Below is the recommended installation process on Ubuntu (tested on Ubuntu 20.04 with PyTorch 1.12.1 + CUDA 11.3):
+The environment setup of this project follows the installation process of [SyncTalk](https://github.com/ZiqiaoPeng/SyncTalk).  Below is the recommended installation process on Ubuntu (tested on Ubuntu 20.04 with PyTorch 1.12.1 + CUDA 11.3):
 
 ```bash
 git clone https://github.com/syncanimation/syncanimation.git

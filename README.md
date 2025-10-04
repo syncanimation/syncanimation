@@ -20,7 +20,6 @@ Most existing audio-driven talking head synthesis methods focus only on the faci
 </p>
 ---
 
----
 ## 🛠 Installation & Dependencies
 
 ### Linux / Ubuntu  

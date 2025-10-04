@@ -18,6 +18,7 @@ Most existing audio-driven talking head synthesis methods focus only on the faci
  <p align="center">
   <img src="assets/image/objectives.png" alt="SyncAnimation Demo" width="1080">
 </p>
+
 ---
 
 ## 🛠 Installation & Dependencies

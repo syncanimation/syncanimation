@@ -1,22 +1,28 @@
-# SyncAnimation: A Real-Time End-to-End Framework for Audio-Driven Human Pose and Talking Head Animation 
+<img width="442" height="81" alt="image" src="https://github.com/user-attachments/assets/4f65167d-bff9-4b07-8c88-08cc1350859c" /># SyncAnimation: A Real-Time End-to-End Framework for Audio-Driven Human Pose and Talking Head Animation 
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)  
 [Project Page](https://syncanimation.github.io/) | [Paper (arXiv)](https://arxiv.org/abs/2501.14646)   
 📢 <b>Official repository of SyncAnimation. The paper has been accepted to IJCAI 2025.</b>
 <p align="center">
-  <img src="assets/image/your_image.png" alt="SyncAnimation Demo" width="720">
+  <img src="assets/image/pipline.png" alt="SyncAnimation Demo" width="720">
 </p>
 > “Generating talking avatar driven by audio remains a significant challenge. Existing methods typically require high computational costs and often lack sufficient facial detail and realism, making them unsuitable for applications that demand high real-time performance and visual quality. Additionally, while some methods can synchronize lip movement, they still face issues with consistency between facial expressions and upper body movement, particularly during silent periods. In this paper, we introduce SyncAnimation, the first NeRF-based method that achieves audio-driven, stable, and real-time generation of speaking avatar by combining generalized audio-to-pose matching and audio-to-expression synchronization. By integrating AudioPose Syncer and AudioEmotion Syncer, SyncAnimation achieves high-precision poses and expression generation, progressively producing audio-synchronized upper body, head, and lip shapes. Furthermore, the High-Synchronization Human Renderer ensures seamless integration of the head and upper body, and achieves audio-sync lip.”  
 
-<!--
-## 🧠 简介  
 
-语音驱动的人脸合成在姿态、同步性、细节还原等方面存在挑战。**SyncTalk** 的核心在于**同步性**（lip sync + 表情 + 头部运动一致性）控制。为了解决这些问题，SyncTalk 采用以下机制：
+## 🧠 Introduction  
 
-- 基于三平面哈希 (tri-plane hash) 表示来保持身份一致性  
-- 同时生成同步口型、面部表情和稳定头部姿态  
-- 在高分辨率视频中恢复头发等细节  
--->
+Most existing audio-driven talking head synthesis methods mainly focus on the facial region,  
+while other parts such as the torso are often pasted from the original image.  
+This results in **audio inconsistency** between facial movements, lips, and body motion.  
+
+**SyncAnimation** addresses this issue by ensuring:  
+- **Audio-Body Consistency**  
+- **Audio-Face Consistency**  
+- **Audio-Lips Consistency** 
+ <p align="center">
+  <img src="assets/image/objectives.png" alt="SyncAnimation Demo" width="720">
+</p>
+
 
 
 ## 🛠 Installation & Dependencies

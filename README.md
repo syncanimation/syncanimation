@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)  
 [Project Page](https://syncanimation.github.io/) | [Paper (arXiv)](https://arxiv.org/abs/2501.14646)   
-
+📢 <b>Official repository of SyncAnimation. The paper has been accepted to IJCAI 2025.</b>
 > “Generating talking avatar driven by audio remains a significant challenge. Existing methods typically require high computational costs and often lack sufficient facial detail and realism, making them unsuitable for applications that demand high real-time performance and visual quality. Additionally, while some methods can synchronize lip movement, they still face issues with consistency between facial expressions and upper body movement, particularly during silent periods. In this paper, we introduce SyncAnimation, the first NeRF-based method that achieves audio-driven, stable, and real-time generation of speaking avatar by combining generalized audio-to-pose matching and audio-to-expression synchronization. By integrating AudioPose Syncer and AudioEmotion Syncer, SyncAnimation achieves high-precision poses and expression generation, progressively producing audio-synchronized upper body, head, and lip shapes. Furthermore, the High-Synchronization Human Renderer ensures seamless integration of the head and upper body, and achieves audio-sync lip.”  
 
 <!--
@@ -23,35 +23,35 @@
 Below is the recommended installation process on Ubuntu (tested on Ubuntu 20.04 with PyTorch 1.12.1 + CUDA 11.3):
 
 ```bash
-git clone https://github.com/ZiqiaoPeng/SyncTalk.git
-cd SyncTalk
+git clone https://github.com/syncanimation/syncanimation.git
+cd syncanimation
 
-# 建议使用 conda 环境
-conda create -n synctalk python==3.8.8
-conda activate synctalk
+# It is recommended to use a conda environment
+conda create -n syncanimation python==3.8.8
+conda activate syncanimation
 
-# 安装 PyTorch 与 torchvision（根据 CUDA 版本选择对应版本）
+# Install PyTorch and torchvision (choose versions according to your CUDA version)
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
 
 sudo apt-get install portaudio19-dev
 pip install -r requirements.txt
 
-# 安装依赖模块（freqencoder / gridencoder / shencoder / raymarching）
+# Install required modules (freqencoder / gridencoder / shencoder / raymarching)
 pip install ./freqencoder
 pip install ./shencoder
 pip install ./gridencoder
 pip install ./raymarching
 
-# 安装 PyTorch3D（若有困难，可使用脚本 fallback 方案）
+# Install PyTorch3D (if issues occur, use the fallback script)
 pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.com/pytorch3d/packaging/wheels/py38_cu113_pyt1121/download.html
-# 或者：
+# Or:
 python ./scripts/install_pytorch3d.py
 
-# 安装 TensorFlow GPU 版本（部分模块可能依赖）
+# Install TensorFlow GPU version 
 pip install tensorflow-gpu==2.8.1
 ```
 
-> **提示**：安装 PyTorch3D 时可能遇到兼容性问题，建议优先使用 `scripts/install_pytorch3d.py` 处理。
+> **Note**：You may encounter compatibility issues when installing PyTorch3D. It is recommended to use the scripts/install_pytorch3d.py script as a fallback.
 
 ---
 
